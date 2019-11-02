@@ -48,8 +48,11 @@ function processFirstItem(stringList, callback) {
  * [2] Invoking `processLength` passing `[]` and `(num) => "There are " + num`,
  * should return "There are 0".
 */
-function processLength(/* CODE HERE */) {
-  /* CODE HERE */
+function processLength(list, cb) {
+  return cb(list);
+}
+function cb (passedList) {
+  return passedList.length
 }
 
 /**
@@ -87,8 +90,18 @@ function processLastItem(/* CODE HERE */) {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
 */
-function processSum(/* CODE HERE */) {
+function processSum(numList, callback) {
   /* CODE HERE */
+  return callback(numList)
+}
+function sumOfAllNums(numList) {
+const sum = numList.reduce(
+  (count, x) => {
+  return count + x
+})
+return numList(sum)
+
+
 }
 
 /**

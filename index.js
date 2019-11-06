@@ -49,11 +49,13 @@ function processFirstItem(stringList, callback) {
  * should return "There are 0".
 */
 function processLength(list, cb) {
-  return cb(list);
+  return cb(list.length)
+  }
+
+function cb(passedList) {
+  return passedList.length;
 }
-function cb (passedList) {
-  return passedList.length
-}
+
 
 /**
  * ### Challenge `processLastItem`
@@ -69,9 +71,11 @@ function cb (passedList) {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
 */
-function processLastItem(/* CODE HERE */) {
-  /* CODE HERE */
+function processLastItem(stringList, callback) {
+  return callback(stringList[stringList.length -1])
 }
+
+
 
 /**
  * ### Challenge `processSum`
@@ -91,16 +95,15 @@ function processLastItem(/* CODE HERE */) {
  * should return 1000.
 */
 function processSum(numList, callback) {
-  /* CODE HERE */
+
   return callback(numList)
 }
-function sumOfAllNums(numList) {
-const sum = numList.reduce(
+function callback(numbers) {
+const sum = numbers.reduce(
   (count, x) => {
   return count + x
-})
-return numList(sum)
-
+});
+return numbers(sum)
 
 }
 
